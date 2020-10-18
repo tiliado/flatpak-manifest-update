@@ -271,7 +271,7 @@ def enqueue_sources(modules: dict, only: Set[str] = None) -> List[Source]:
                 s.skip(f"Unsupported type {s.type!r}.")
                 continue
 
-            if not s.current_url and s.can_update:
+            if not s.current_url and not s.can_update:
                 LOGGER.warning("Skipping module %r source #%d - missing source 'url'.", module_name, i)
                 s.skip("Missing source 'url'.")
                 continue

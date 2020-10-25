@@ -1,2 +1,2 @@
 pyyaml
-aiohttp[speedups]
+aiohttp[speedups] ==3.6.*

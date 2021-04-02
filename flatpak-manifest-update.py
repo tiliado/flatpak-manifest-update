@@ -237,7 +237,7 @@ def enqueue_sources(modules: dict, only: Set[str] = None) -> List[Source]:
                     else:
                         params.setdefault(
                             "url-pattern",
-                            rf"/{re.escape(project)}/archive/[a-zA-Z]*$version\.{re.escape(archive)}"
+                            rf"/{re.escape(project)}/archive/refs/tags/[a-zA-Z]*$version\.{re.escape(archive)}"
                         )
                 elif type_ == "ubuntu":
                     assert project
